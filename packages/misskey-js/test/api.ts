@@ -1,6 +1,7 @@
 import { enableFetchMocks } from 'jest-fetch-mock';
 import { APIClient, isAPIError } from '../src/api';
 
+
 enableFetchMocks();
 
 function getFetchCall(call: any[]) {
