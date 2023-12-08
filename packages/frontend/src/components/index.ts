@@ -4,6 +4,7 @@
  */
 
 
+
 import { App } from 'vue';
 
 import Mfm from './global/MkMisskeyFlavoredMarkdown.js';
