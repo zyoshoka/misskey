@@ -4,8 +4,9 @@
  */
 
 import { createApp, defineAsyncComponent, markRaw } from 'vue';
+import * as Sentry from '@sentry/vue';
 import { common } from './common.js';
-import { ui } from '@/config.js';
+import { apiUrl, ui } from '@/config.js';
 import { i18n } from '@/i18n.js';
 import { alert, confirm, popup, post, toast } from '@/os.js';
 import { useStream } from '@/stream.js';
@@ -23,13 +24,39 @@ import { emojiPicker } from '@/scripts/emoji-picker.js';
 import { mainRouter } from '@/router/main.js';
 
 export async function mainBoot() {
-	const { isClientUpdated } = await common(() => createApp(
+	const { isClientUpdated, app } = await common(() => createApp(
 		new URLSearchParams(window.location.search).has('zen') || (ui === 'deck' && deckStore.state.useSimpleUiForNonRootPages && location.pathname !== '/') ? defineAsyncComponent(() => import('@/ui/zen.vue')) :
 		!$i ? defineAsyncComponent(() => import('@/ui/visitor.vue')) :
 		ui === 'deck' ? defineAsyncComponent(() => import('@/ui/deck.vue')) :
 		ui === 'classic' ? defineAsyncComponent(() => import('@/ui/classic.vue')) :
 		defineAsyncComponent(() => import('@/ui/universal.vue')),
 	));
+
+	if (_SENTRY_FOR_FRONTEND_DSN_) {
+		Sentry.init({
+			app,
+			// @ts-expect-error なんかエラー出る
+			dsn: _SENTRY_FOR_FRONTEND_DSN_,
+			integrations: [
+				Sentry.browserTracingIntegration(),
+				// @ts-expect-error なんかエラー出る
+				Sentry.replayIntegration(),
+			],
+
+			// Set tracesSampleRate to 1.0 to capture 100%
+			// of transactions for performance monitoring.
+			// We recommend adjusting this value in production
+			tracesSampleRate: 1.0,
+
+			// Set `tracePropagationTargets` to control for which URLs distributed tracing should be enabled
+			tracePropagationTargets: [apiUrl],
+
+			// Capture Replay for 10% of all sessions,
+			// plus for 100% of sessions with an error
+			replaysSessionSampleRate: 0.1,
+			replaysOnErrorSampleRate: 1.0,
+		});
+	}
 
 	reactionPicker.init();
 	emojiPicker.init();
@@ -96,7 +123,7 @@ export async function mainBoot() {
 					}).render();
 				}
 			}
-		}	
+		}
 	} catch (error) {
 		// console.error(error);
 		console.error('Failed to initialise the seasonal screen effect canvas context:', error);
