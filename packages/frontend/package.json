@@ -24,6 +24,7 @@
 		"@rollup/plugin-json": "6.1.0",
 		"@rollup/plugin-replace": "5.0.5",
 		"@rollup/pluginutils": "5.1.0",
+		"@sentry/vue": "8.7.0",
 		"@syuilo/aiscript": "0.18.0",
 		"@tabler/icons-webfont": "3.3.0",
 		"@twemoji/parser": "15.1.1",
@@ -136,6 +137,7 @@
 		"vitest-fetch-mock": "0.2.2",
 		"vue-component-type-helpers": "2.0.16",
 		"vue-eslint-parser": "9.4.2",
-		"vue-tsc": "2.0.16"
+		"vue-tsc": "2.0.16",
+		"yaml": "2.4.2"
 	}
 }
