@@ -138,7 +138,6 @@
 		"vitest-fetch-mock": "0.2.2",
 		"vue-component-type-helpers": "2.0.16",
 		"vue-eslint-parser": "9.4.2",
-		"vue-tsc": "2.0.16",
-		"yaml": "2.4.2"
+		"vue-tsc": "2.0.16"
 	}
 }

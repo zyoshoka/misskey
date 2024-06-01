@@ -1052,9 +1052,6 @@ importers:
       vue-tsc:
         specifier: 2.0.16
         version: 2.0.16(typescript@5.4.5)
-      yaml:
-        specifier: 2.4.2
-        version: 2.4.2
 
   packages/misskey-bubble-game:
     dependencies:
