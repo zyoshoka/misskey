@@ -27,7 +27,6 @@ import { QueueService } from '@/core/QueueService.js';
 import type { UsersRepository, NotesRepository, FollowingsRepository, AbuseUserReportsRepository, FollowRequestsRepository } from '@/models/_.js';
 import { bindThis } from '@/decorators.js';
 import type { MiRemoteUser } from '@/models/User.js';
-import { isNotNull } from '@/misc/is-not-null.js';
 import { GlobalEventService } from '@/core/GlobalEventService.js';
 import { AbuseReportService } from '@/core/AbuseReportService.js';
 import { getApHrefNullable, getApId, getApIds, getApType, isAccept, isActor, isAdd, isAnnounce, isBlock, isCollection, isCollectionOrOrderedCollection, isCreate, isDelete, isFlag, isFollow, isLike, isMove, isPost, isReject, isRemove, isTombstone, isUndo, isUpdate, validActor, validPost } from './type.js';
@@ -115,15 +114,8 @@ export class ApInboxService {
 			result = await this.performOneActivity(actor, activity);
 		}
 
-		// ついでにリモートユーザーの情報が古かったら更新しておく
-		if (actor.uri) {
-			if (actor.lastFetchedAt == null || Date.now() - actor.lastFetchedAt.getTime() > 1000 * 60 * 60 * 24) {
-				setImmediate(() => {
-					this.apPersonService.updatePerson(actor.uri);
-				});
-			}
-		}
-		return result;
+		// ついでにリモートユーザーの情報が古かったら更新しておく?
+		// → No, この関数が呼び出される前に署名検証で更新されているはず
 	}
 
 	@bindThis
@@ -538,7 +530,7 @@ export class ApInboxService {
 		const userIds = uris
 			.filter(uri => uri.startsWith(this.config.url + '/users/'))
 			.map(uri => uri.split('/').at(-1))
-			.filter(isNotNull);
+			.filter(x => x != null);
 		const users = await this.usersRepository.findBy({
 			id: In(userIds),
 		});
