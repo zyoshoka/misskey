@@ -69,7 +69,7 @@ export class Resolver {
 	}
 
 	@bindThis
-	public async resolve(value: string | IObject): Promise<IObject> {
+	public async resolve(value: string | IObject, logObject = false): Promise<IObject> {
 		if (typeof value !== 'string') {
 			return value;
 		}
@@ -110,6 +110,8 @@ export class Resolver {
 		const object = (this.user
 			? await this.apRequestService.signedGet(value, this.user, server.httpMessageSignaturesImplementationLevel) as IObject
 			: await this.httpRequestService.getActivityJson(value)) as IObject;
+
+		if (logObject) this.logger.info(`Resolved object: ${JSON.stringify(object)}`);
 
 		if (
 			Array.isArray(object['@context']) ?
