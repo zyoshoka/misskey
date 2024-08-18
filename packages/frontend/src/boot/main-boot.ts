@@ -36,11 +36,9 @@ export async function mainBoot() {
 	if (_SENTRY_FOR_FRONTEND_DSN_) {
 		Sentry.init({
 			app,
-			// @ts-expect-error なんかエラー出る
 			dsn: _SENTRY_FOR_FRONTEND_DSN_,
 			integrations: [
 				Sentry.browserTracingIntegration(),
-				// @ts-expect-error なんかエラー出る
 				Sentry.replayIntegration(),
 			],
 
