@@ -5080,6 +5080,21 @@ export type components = {
       enableEmail: boolean;
       enableServiceWorker: boolean;
       translatorAvailable: boolean;
+      sentryForFrontend: {
+        options: {
+          dsn: string;
+          [key: string]: unknown;
+        };
+        vueIntegration?: {
+          [key: string]: unknown;
+        };
+        browserTracingIntegration?: {
+          [key: string]: unknown;
+        };
+        replayIntegration?: {
+          [key: string]: unknown;
+        };
+      } | null;
       mediaProxy: string;
       enableUrlPreview: boolean;
       backgroundImageUrl: string | null;
