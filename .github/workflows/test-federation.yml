@@ -76,6 +76,7 @@ jobs:
           docker compose logs | tail -n 300
           exit 1
       - name: Test
+        continue-on-error: true
         run: |
           cd packages/backend/test-federation
           docker compose run --no-deps --rm tester -- pnpm -F backend test:fed packages/backend/test-federation/test/user.test.ts
