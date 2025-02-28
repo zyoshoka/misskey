@@ -81,7 +81,9 @@ jobs:
           cd packages/backend/test-federation
           docker compose run --no-deps --rm tester -- pnpm -F backend test:fed packages/backend/test-federation/test/user.test.ts
       - name: Log
-        run: docker compose logs
+        run: |
+          cd packages/backend/test-federation
+          docker compose logs
       - name: Stop servers
         run: |
           cd packages/backend/test-federation
