@@ -36,7 +36,7 @@ export type Request = <
 
 type Host = 'a.test' | 'b.test';
 
-export async function sleep(ms = 5000): Promise<void> {
+export async function sleep(ms = 1000): Promise<void> {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
