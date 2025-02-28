@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - system-account-test # test
     paths:
       - packages/backend/**
       - packages/misskey-js/**
