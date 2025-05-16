@@ -75,6 +75,13 @@
 			],
 		},
 		{
+			groupName: '[Node.js] Update dependencies',
+			matchDepNames: ['ghcr.io/devcontainers/features/node:1'],
+			matchFileNames: [
+				'.devcontainer/**',
+			],
+		},
+		{
 			groupName: '[Docker] Update dependencies',
 			matchFileNames: [
 				'compose.local-db.yml',
@@ -85,9 +92,20 @@
 		},
 		{
 			groupName: '[devcontainer] Update dependencies',
+			matchDepNames: ['!ghcr.io/devcontainers/features/node:1'],
 			matchFileNames: [
 				'.devcontainer/**',
 			],
+		},
+	],
+	customManagers: [
+		{
+			customType: 'regex',
+			fileMatch: ['^Dockerfile$'],
+			matchStrings: ['ARG NODE_VERSION=(?<currentValue>.*?)\\n'],
+			datasourceTemplate: 'docker',
+			depNameTemplate: 'node',
+			versioningTemplate: 'docker',
 		},
 	],
 }
