@@ -70,21 +70,13 @@
 		},
 		{
 			groupName: '[Node.js] Update dependencies',
-			matchFileNames: [
-				'.node-version',
-			],
-		},
-		{
-			groupName: '[Node.js] Update dependencies',
-			matchManagers: ['custom.regex'],
-			matchPackageNames: ['node'],
-		},
-		{
-			groupName: '[Node.js] Update dependencies',
 			matchDepNames: ['ghcr.io/devcontainers/features/node:1'],
 			matchFileNames: [
+				'.node-version',
 				'.devcontainer/**',
 			],
+			matchManagers: ['custom.regex'],
+			matchPackageNames: ['node'],
 		},
 		{
 			groupName: '[Docker] Update dependencies',
