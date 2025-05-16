@@ -81,7 +81,7 @@
 		"@misskey-dev/sharp-read-bmp": "1.2.0",
 		"@misskey-dev/summaly": "5.2.1",
 		"@napi-rs/canvas": "0.1.69",
-		"@nestjs/common": "11.1.0",
+		"@nestjs/common": "11.1.1",
 		"@nestjs/core": "11.1.0",
 		"@nestjs/testing": "11.1.0",
 		"@peertube/http-signature": "1.7.0",
