@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - deadlock-test # test
     paths:
       - packages/backend/**
       - packages/misskey-js/**
@@ -76,7 +77,7 @@ jobs:
       - name: Test
         run: |
           cd packages/backend/test-federation
-          docker compose run --no-deps tester
+          docker compose run --no-deps --rm tester -- pnpm -F backend test:fed packages/backend/test-federation/test/user.test.ts
       - name: Log
         if: always()
         run: |
