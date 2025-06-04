@@ -772,7 +772,7 @@ export class DriveService {
 			}
 		}
 
-		await this.deletePostProcess(file, isExpired, deleter);
+		this.deletePostProcess(file, isExpired, deleter);
 	}
 
 	@bindThis
