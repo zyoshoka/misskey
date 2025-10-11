@@ -244,8 +244,8 @@ importers:
         specifier: 14.4.7
         version: 14.4.7
       happy-dom:
-        specifier: 16.8.1
-        version: 16.8.1
+        specifier: 20.0.0
+        version: 20.0.0
       hpagent:
         specifier: 1.2.0
         version: 1.2.0
@@ -986,7 +986,7 @@ importers:
         version: 8.31.0(eslint@9.25.1)(typescript@5.8.3)
       '@vitest/coverage-v8':
         specifier: 3.1.2
-        version: 3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
+        version: 3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
       '@vue/compiler-core':
         specifier: 3.5.13
         version: 3.5.13
@@ -1012,8 +1012,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       happy-dom:
-        specifier: 17.4.4
-        version: 17.4.4
+        specifier: 20.0.0
+        version: 20.0.0
       intersection-observer:
         specifier: 0.12.2
         version: 0.12.2
@@ -1058,10 +1058,10 @@ importers:
         version: 1.0.3
       vitest:
         specifier: 3.1.2
-        version: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
+        version: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
       vitest-fetch-mock:
         specifier: 0.4.5
-        version: 0.4.5(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
+        version: 0.4.5(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
       vue-component-type-helpers:
         specifier: 2.2.10
         version: 2.2.10
@@ -1185,7 +1185,7 @@ importers:
         version: 8.31.0(eslint@9.25.1)(typescript@5.8.3)
       '@vitest/coverage-v8':
         specifier: 3.1.2
-        version: 3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
+        version: 3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
       '@vue/runtime-core':
         specifier: 3.5.13
         version: 3.5.13
@@ -1205,8 +1205,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       happy-dom:
-        specifier: 17.4.4
-        version: 17.4.4
+        specifier: 20.0.0
+        version: 20.0.0
       intersection-observer:
         specifier: 0.12.2
         version: 0.12.2
@@ -2377,6 +2377,7 @@ packages:
 
   '@github/webauthn-json@2.1.1':
     resolution: {integrity: sha512-XrftRn4z75SnaJOmZQbt7Mk+IIjqVHw+glDGOxuHwXkZBZh/MBoRS7MHjSZMDaLhT4RjN2VqiEU7EOYleuJWSQ==}
+    deprecated: 'Deprecated: Modern browsers support built-in WebAuthn JSON methods. Please use native browser methods instead. For more information, visit https://github.com/github/webauthn-json'
     hasBin: true
 
   '@hapi/boom@10.0.1':
@@ -3526,6 +3527,7 @@ packages:
 
   '@simplewebauthn/types@12.0.0':
     resolution: {integrity: sha512-q6y8MkoV8V8jB4zzp18Uyj2I7oFp2/ONL8c3j8uT06AOWu3cIChc1au71QYHrP2b+xDapkGTiv+9lX7xkTlAsA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -4404,6 +4406,9 @@ packages:
   '@types/node-fetch@2.6.11':
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
 
+  '@types/node@20.19.20':
+    resolution: {integrity: sha512-2Q7WS25j4pS1cS8yw3d6buNCVJukOTeQ39bAnwR6sOJbaxvyCGebzTMypDFN82CxBLnl+lSWVdCCWbRY6y9yZQ==}
+
   '@types/node@22.15.2':
     resolution: {integrity: sha512-uKXqKN9beGoMdBfcaTY1ecwz6ctxuJAcUlwE55938g0ZJ8lRxwAZqRz2AJ4pzpt5dHdTPMB863UZ0ESiFUcP7A==}
 
@@ -4556,6 +4561,9 @@ packages:
 
   '@types/web-push@3.6.4':
     resolution: {integrity: sha512-GnJmSr40H3RAnj0s34FNTcJi1hmWFV5KXugE0mYWnYhgTAHLJ/dJKAwDmvPJYMke0RplY2XE9LnM4hqSqKIjhQ==}
+
+  '@types/whatwg-mimetype@3.0.2':
+    resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
 
   '@types/ws@8.18.1':
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
@@ -6583,6 +6591,7 @@ packages:
   fluent-ffmpeg@2.1.3:
     resolution: {integrity: sha512-Be3narBNt2s6bsaqP6Jzq91heDgOEaDCJAXcE3qcma/EJBSy5FB4cvO31XBInuAuKBx8Kptf8dkhjK0IOru39Q==}
     engines: {node: '>=18'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   follow-redirects@1.15.2:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
@@ -6845,13 +6854,9 @@ packages:
     resolution: {integrity: sha512-tSQXBXS/MWQOn/RKckawJ61vvsDpCom87JgxiYdGwHdOa0ht0vzUWDlfioofFCRU0L+6NGDt6XzbgoJvZkMeRQ==}
     engines: {node: '>=0.8.0'}
 
-  happy-dom@16.8.1:
-    resolution: {integrity: sha512-n0QrmT9lD81rbpKsyhnlz3DgnMZlaOkJPpgi746doA+HvaMC79bdWkwjrNnGJRvDrWTI8iOcJiVTJ5CdT/AZRw==}
-    engines: {node: '>=18.0.0'}
-
-  happy-dom@17.4.4:
-    resolution: {integrity: sha512-/Pb0ctk3HTZ5xEL3BZ0hK1AqDSAUuRQitOmROPHhfUYEWpmTImwfD8vFDGADmMAX0JYgbcgxWoLFKtsWhcpuVA==}
-    engines: {node: '>=18.0.0'}
+  happy-dom@20.0.0:
+    resolution: {integrity: sha512-GkWnwIFxVGCf2raNrxImLo397RdGhLapj5cT3R2PT7FwL62Ze1DROhzmYW7+J3p9105DYMVenEejEbnq5wA37w==}
+    engines: {node: '>=20.0.0'}
 
   hard-rejection@2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
@@ -8228,6 +8233,7 @@ packages:
   multer@1.4.4-lts.1:
     resolution: {integrity: sha512-WeSGziVj6+Z2/MwQo3GvqzgR+9Uc+qt8SwHKh3gvNPiISKfsMfG4SvCOFYlxxgkXt7yIV2i1yczehm0EOKIxIg==}
     engines: {node: '>= 6.0.0'}
+    deprecated: Multer 1.x is impacted by a number of vulnerabilities, which have been patched in 2.x. You should upgrade to the latest 2.x version.
 
   mute-stream@2.0.0:
     resolution: {integrity: sha512-WWdIxpyjEn+FhQJQQv9aQAYlHoNVdzIzUySNV1gHUPDSdZJ3yZn7pAAbQcV7B56Mvu881q9FZV+0Vx2xC44VWA==}
@@ -10048,10 +10054,12 @@ packages:
   superagent@9.0.2:
     resolution: {integrity: sha512-xuW7dzkUpcJq7QnhOsnNUgtYp3xRwpt2F7abdRYIpCsAt0hhUqia0EdxyXZQQpNmGtsCzYHryaKSV3q3GJnq7w==}
     engines: {node: '>=14.18.0'}
+    deprecated: Please upgrade to superagent v10.2.2+, see release notes at https://github.com/forwardemail/superagent/releases/tag/v10.2.2 - maintenance is supported by Forward Email @ https://forwardemail.net
 
   supertest@7.1.0:
     resolution: {integrity: sha512-5QeSO8hSrKghtcWEoPiO036fxH0Ii2wVQfFZSP0oqQhmjk8bOLhDFXr4JrvaFmPuEWUoq4znY3uSi8UzLKxGqw==}
     engines: {node: '>=14.18.0'}
+    deprecated: Please upgrade to supertest v7.1.3+, see release notes at https://github.com/forwardemail/supertest/releases/tag/v7.1.3 - maintenance is supported by Forward Email @ https://forwardemail.net
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -10731,6 +10739,9 @@ packages:
 
   vue-component-type-helpers@2.2.10:
     resolution: {integrity: sha512-iDUO7uQK+Sab2tYuiP9D1oLujCWlhHELHMgV/cB13cuGbG4qwkLHvtfWb6FzvxrIOPDnU0oHsz2MlQjhYDeaHA==}
+
+  vue-component-type-helpers@3.1.1:
+    resolution: {integrity: sha512-B0kHv7qX6E7+kdc5nsaqjdGZ1KwNKSUQDWGy7XkTYT7wFsOpkEyaJ1Vq79TjwrrtuLRgizrTV7PPuC4rRQo+vw==}
 
   vue-demi@0.14.7:
     resolution: {integrity: sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==}
@@ -14302,7 +14313,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.5.13(typescript@5.8.3)
-      vue-component-type-helpers: 2.2.10
+      vue-component-type-helpers: 3.1.1
 
   '@stylistic/eslint-plugin@2.13.0(eslint@9.25.1)(typescript@5.8.3)':
     dependencies:
@@ -14743,6 +14754,10 @@ snapshots:
       '@types/node': 22.15.2
       form-data: 4.0.2
 
+  '@types/node@20.19.20':
+    dependencies:
+      undici-types: 6.21.0
+
   '@types/node@22.15.2':
     dependencies:
       undici-types: 6.21.0
@@ -14895,6 +14910,8 @@ snapshots:
     dependencies:
       '@types/node': 22.15.2
 
+  '@types/whatwg-mimetype@3.0.2': {}
+
   '@types/ws@8.18.1':
     dependencies:
       '@types/node': 22.15.2
@@ -14994,7 +15011,7 @@ snapshots:
       vite: 6.3.4(@types/node@22.15.2)(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
       vue: 3.5.13(typescript@5.8.3)
 
-  '@vitest/coverage-v8@3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))':
+  '@vitest/coverage-v8@3.1.2(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
@@ -15008,7 +15025,7 @@ snapshots:
       std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
+      vitest: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -17832,14 +17849,10 @@ snapshots:
 
   hammerjs@2.0.8: {}
 
-  happy-dom@16.8.1:
+  happy-dom@20.0.0:
     dependencies:
-      webidl-conversions: 7.0.0
-      whatwg-mimetype: 3.0.0
-
-  happy-dom@17.4.4:
-    dependencies:
-      webidl-conversions: 7.0.0
+      '@types/node': 20.19.20
+      '@types/whatwg-mimetype': 3.0.2
       whatwg-mimetype: 3.0.0
 
   hard-rejection@2.1.0: {}
@@ -22143,11 +22156,11 @@ snapshots:
       terser: 5.39.0
       tsx: 4.19.3
 
-  vitest-fetch-mock@0.4.5(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)):
+  vitest-fetch-mock@0.4.5(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)):
     dependencies:
-      vitest: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
+      vitest: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3)
 
-  vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@17.4.4)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3):
+  vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.2)(happy-dom@20.0.0)(jsdom@26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5))(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3):
     dependencies:
       '@vitest/expect': 3.1.2
       '@vitest/mocker': 3.1.2(msw@2.7.5(@types/node@22.15.2)(typescript@5.8.3))(vite@6.3.4(@types/node@22.15.2)(sass@1.87.0)(terser@5.39.0)(tsx@4.19.3))
@@ -22173,7 +22186,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 22.15.2
-      happy-dom: 17.4.4
+      happy-dom: 20.0.0
       jsdom: 26.1.0(bufferutil@4.0.9)(canvas@3.1.0)(utf-8-validate@6.0.5)
     transitivePeerDependencies:
       - jiti
@@ -22222,6 +22235,8 @@ snapshots:
   vue-component-type-helpers@2.0.16: {}
 
   vue-component-type-helpers@2.2.10: {}
+
+  vue-component-type-helpers@3.1.1: {}
 
   vue-demi@0.14.7(vue@3.5.13(typescript@5.8.3)):
     dependencies:
