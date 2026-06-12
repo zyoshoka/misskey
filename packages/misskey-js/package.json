@@ -50,7 +50,7 @@
 		"execa": "8.0.1",
 		"tsd": "0.32.0",
 		"typescript": "5.8.3",
-		"esbuild": "0.25.3",
+		"esbuild": "0.28.1",
 		"glob": "11.0.2"
 	},
 	"files": [
