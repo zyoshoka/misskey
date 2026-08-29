@@ -58,7 +58,7 @@
 		"glob": "11.0.2",
 		"ignore-walk": "7.0.0",
 		"js-yaml": "4.1.0",
-		"postcss": "8.5.3",
+		"postcss": "8.5.23",
 		"tar": "7.4.3",
 		"terser": "5.39.0",
 		"typescript": "5.8.3"
